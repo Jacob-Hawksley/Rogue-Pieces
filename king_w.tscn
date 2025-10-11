@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://bwnqkd5d8tyav"]
+
+[ext_resource type="Texture2D" uid="uid://d2xucdshevfiu" path="res://images/kingw.png" id="1_opxrx"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_orv35"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_opxrx")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="KingW" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_orv35")

@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://do2e1nj1cjo5k"]
+
+[ext_resource type="Texture2D" uid="uid://dss4bc271srmv" path="res://images/queenw.png" id="1_c46pt"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_y4x7j"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_c46pt")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="QueenW" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_y4x7j")

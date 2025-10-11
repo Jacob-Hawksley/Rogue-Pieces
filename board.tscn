@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://cxp4bb62ir1ov"]
+
+[ext_resource type="Texture2D" uid="uid://dsj1ynf3m1317" path="res://images/board.png" id="1_p0ybc"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_psm7c"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_p0ybc")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Board" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_psm7c")

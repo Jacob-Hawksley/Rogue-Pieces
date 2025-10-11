@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://cl1vsbt2ofjcw"]
+
+[ext_resource type="Texture2D" uid="uid://b6wbp1umrj0sx" path="res://images/knightw.png" id="1_g12rv"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_eoaws"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_g12rv")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="KnightW" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_eoaws")

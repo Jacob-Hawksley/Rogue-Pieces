@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://cf65f0i1e3p3v"]
+
+[ext_resource type="Texture2D" uid="uid://drk05y2cnt18w" path="res://images/bishopw.png" id="1_sdjlj"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tbsxw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_sdjlj")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="BishopW" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_tbsxw")

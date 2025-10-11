@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://do0jxmffw7n2c"]
+
+[ext_resource type="Texture2D" uid="uid://ceie8od3wa07p" path="res://images/pawnw.png" id="1_nurbo"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_83ch4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_nurbo")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="PawnW" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_83ch4")

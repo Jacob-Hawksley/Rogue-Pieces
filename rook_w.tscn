@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://08o1ftiwdqun"]
+
+[ext_resource type="Texture2D" uid="uid://b5m25k8lortpr" path="res://images/rookw.png" id="1_kalhb"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_g6mff"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_kalhb")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="RookW" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_g6mff")

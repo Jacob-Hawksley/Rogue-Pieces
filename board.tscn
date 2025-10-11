@@ -14,4 +14,5 @@ animations = [{
 }]
 
 [node name="Board" type="AnimatedSprite2D"]
+z_index = -1
 sprite_frames = SubResource("SpriteFrames_psm7c")

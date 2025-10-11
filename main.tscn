@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://cp73magymmcvu"]
+[gd_scene load_steps=4 format=3 uid="uid://cp73magymmcvu"]
 
 [ext_resource type="Script" uid="uid://clvnkem8iytt0" path="res://main.gd" id="1_ig7tw"]
 [ext_resource type="PackedScene" uid="uid://cxp4bb62ir1ov" path="res://board.tscn" id="2_0xm2m"]
+[ext_resource type="Script" uid="uid://difvhm2yxcjvm" path="res://white_pieces.gd" id="3_h2yge"]
 
 [node name="Main" type="Node"]
 script = ExtResource("1_ig7tw")
@@ -12,3 +13,12 @@ position = Vector2(4, 10)
 [node name="Camera2D" type="Camera2D" parent="Board"]
 process_mode = 3
 zoom = Vector2(0.5, 0.5)
+
+[node name="WhitePieces" type="Node" parent="."]
+script = ExtResource("3_h2yge")
+king = null
+rook = null
+bishop = null
+knight = null
+queen = null
+pawn = null

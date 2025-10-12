@@ -1,6 +1,6 @@
 extends Node
 var board = {
-	'a1':'wpawn',
+	'a1':'wking',
 	'a2':null,
 	'a3':null,
 	'a4':null,

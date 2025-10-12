@@ -14,28 +14,34 @@ func _process(_delta: float) -> void:
 			add_child(p)
 			p.scale = Vector2(0.75,0.75)
 			Main.currentboard[i] = 'wpawn'
+			p.position = Main.boardpositions[i]
 		if Main.board[i] == 'wrook' and Main.currentboard[i] == null:
 			var r = rook.instantiate()
 			add_child(r)
 			r.scale = Vector2(0.75,0.75)
 			Main.currentboard[i] = 'wrook'
+			r.position = Main.boardpositions[i]
 		if Main.board[i] == 'wking' and Main.currentboard[i] == null:
 			var k = king.instantiate()
 			add_child(k)
 			k.scale = Vector2(0.75,0.75)
 			Main.currentboard[i] = 'wking'
+			k.position = Main.boardpositions[i]
 		if Main.board[i] == 'wbishop' and Main.currentboard[i] == null:
 			var b = bishop.instantiate()
 			add_child(b)
 			b.scale = Vector2(0.75,0.75)
 			Main.currentboard[i] = 'wbishop'
+			b.position = Main.boardpositions[i]
 		if Main.board[i] == 'wknight' and Main.currentboard[i] == null:
 			var kn = knight.instantiate()
 			add_child(kn)
 			kn.scale = Vector2(0.75,0.75)
 			Main.currentboard[i] = 'wknight'
+			kn.position = Main.boardpositions[i]
 		if Main.board[i] == 'wqueen' and Main.currentboard[i] == null:
 			var q = queen.instantiate()
 			add_child(q)
 			q.scale = Vector2(0.75,0.75)
 			Main.currentboard[i] = 'wqueen'
+			q.position = Main.boardpositions[i]

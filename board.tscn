@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://cxp4bb62ir1ov"]
+[gd_scene load_steps=4 format=3 uid="uid://cxp4bb62ir1ov"]
 
 [ext_resource type="Texture2D" uid="uid://dsj1ynf3m1317" path="res://images/board.png" id="1_p0ybc"]
+[ext_resource type="Script" uid="uid://dx5h4es3uhkty" path="res://board.gd" id="2_psm7c"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_psm7c"]
 animations = [{
@@ -15,4 +16,6 @@ animations = [{
 
 [node name="Board" type="AnimatedSprite2D"]
 z_index = -1
+position = Vector2(4, 10)
 sprite_frames = SubResource("SpriteFrames_psm7c")
+script = ExtResource("2_psm7c")

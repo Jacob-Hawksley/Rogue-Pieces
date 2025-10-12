@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://cxp4bb62ir1ov"]
+[gd_scene load_steps=12 format=3 uid="uid://cxp4bb62ir1ov"]
 
 [ext_resource type="Texture2D" uid="uid://dsj1ynf3m1317" path="res://images/board.png" id="1_p0ybc"]
 [ext_resource type="Script" uid="uid://dx5h4es3uhkty" path="res://board.gd" id="2_psm7c"]
@@ -14,8 +14,530 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_psm7c"]
+size = Vector2(147, 150.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8l818"]
+size = Vector2(21.150108, 19.528389)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jqgjh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vf5bc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mgc1s"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rq8yp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tngv2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c4ttu"]
+
 [node name="Board" type="AnimatedSprite2D"]
 z_index = -1
-position = Vector2(4, 10)
 sprite_frames = SubResource("SpriteFrames_psm7c")
 script = ExtResource("2_psm7c")
+
+[node name="a1" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="a1"]
+position = Vector2(-520.5, 516.25)
+shape = SubResource("RectangleShape2D_psm7c")
+
+[node name="b1" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="b1"]
+position = Vector2(-373.0288, 515.1687)
+scale = Vector2(6.9057636, 7.766268)
+shape = SubResource("RectangleShape2D_8l818")
+
+[node name="c1" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="c1"]
+position = Vector2(-227.00002, 515)
+scale = Vector2(7.043013, 7.3653445)
+shape = SubResource("RectangleShape2D_jqgjh")
+
+[node name="d1" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="d1"]
+position = Vector2(-79, 515)
+scale = Vector2(7.6452627, 7.4884496)
+shape = SubResource("RectangleShape2D_vf5bc")
+
+[node name="e1" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="e1"]
+position = Vector2(67, 521)
+scale = Vector2(-7.040016, 7.4583273)
+shape = SubResource("RectangleShape2D_mgc1s")
+
+[node name="f1" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="f1"]
+position = Vector2(212, 517)
+scale = Vector2(7.3210673, 7.375036)
+shape = SubResource("RectangleShape2D_rq8yp")
+
+[node name="g1" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="g1"]
+position = Vector2(358, 519)
+scale = Vector2(7.0114365, 7.3605604)
+shape = SubResource("RectangleShape2D_tngv2")
+
+[node name="h1" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="h1"]
+position = Vector2(511.00003, 518)
+scale = Vector2(7.2725296, 7.6980085)
+shape = SubResource("RectangleShape2D_c4ttu")
+
+[node name="a2" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="a2"]
+position = Vector2(-520, 364.25)
+shape = SubResource("RectangleShape2D_psm7c")
+
+[node name="b2" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="b2"]
+position = Vector2(-372.5288, 363.1687)
+scale = Vector2(6.9057636, 7.766268)
+shape = SubResource("RectangleShape2D_8l818")
+
+[node name="c2" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="c2"]
+position = Vector2(-226.50002, 363)
+scale = Vector2(7.043013, 7.3653445)
+shape = SubResource("RectangleShape2D_jqgjh")
+
+[node name="d2" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="d2"]
+position = Vector2(-78.5, 363)
+scale = Vector2(7.6452627, 7.4884496)
+shape = SubResource("RectangleShape2D_vf5bc")
+
+[node name="e2" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="e2"]
+position = Vector2(67.5, 369)
+scale = Vector2(-7.040016, 7.4583273)
+shape = SubResource("RectangleShape2D_mgc1s")
+
+[node name="f2" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="f2"]
+position = Vector2(212.5, 365)
+scale = Vector2(7.3210673, 7.375036)
+shape = SubResource("RectangleShape2D_rq8yp")
+
+[node name="g2" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="g2"]
+position = Vector2(358.5, 367)
+scale = Vector2(7.0114365, 7.3605604)
+shape = SubResource("RectangleShape2D_tngv2")
+
+[node name="h2" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="h2"]
+position = Vector2(511.50003, 366)
+scale = Vector2(7.2725296, 7.6980085)
+shape = SubResource("RectangleShape2D_c4ttu")
+
+[node name="a3" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="a3"]
+position = Vector2(-519, 214.25)
+shape = SubResource("RectangleShape2D_psm7c")
+
+[node name="b3" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="b3"]
+position = Vector2(-371.5288, 213.1687)
+scale = Vector2(6.9057636, 7.766268)
+shape = SubResource("RectangleShape2D_8l818")
+
+[node name="c3" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="c3"]
+position = Vector2(-225.50002, 213)
+scale = Vector2(7.043013, 7.3653445)
+shape = SubResource("RectangleShape2D_jqgjh")
+
+[node name="d3" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="d3"]
+position = Vector2(-77.5, 213)
+scale = Vector2(7.6452627, 7.4884496)
+shape = SubResource("RectangleShape2D_vf5bc")
+
+[node name="e3" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="e3"]
+position = Vector2(68.5, 219)
+scale = Vector2(-7.040016, 7.4583273)
+shape = SubResource("RectangleShape2D_mgc1s")
+
+[node name="f3" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="f3"]
+position = Vector2(213.5, 215)
+scale = Vector2(7.3210673, 7.375036)
+shape = SubResource("RectangleShape2D_rq8yp")
+
+[node name="g3" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="g3"]
+position = Vector2(359.5, 217)
+scale = Vector2(7.0114365, 7.3605604)
+shape = SubResource("RectangleShape2D_tngv2")
+
+[node name="h3" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="h3"]
+position = Vector2(512.5, 216)
+scale = Vector2(7.2725296, 7.6980085)
+shape = SubResource("RectangleShape2D_c4ttu")
+
+[node name="a4" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="a4"]
+position = Vector2(-517, 65.25)
+shape = SubResource("RectangleShape2D_psm7c")
+
+[node name="b4" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="b4"]
+position = Vector2(-369.5288, 64.1687)
+scale = Vector2(6.9057636, 7.766268)
+shape = SubResource("RectangleShape2D_8l818")
+
+[node name="c4" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="c4"]
+position = Vector2(-223.50002, 64)
+scale = Vector2(7.043013, 7.3653445)
+shape = SubResource("RectangleShape2D_jqgjh")
+
+[node name="d4" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="d4"]
+position = Vector2(-75.5, 64)
+scale = Vector2(7.6452627, 7.4884496)
+shape = SubResource("RectangleShape2D_vf5bc")
+
+[node name="e4" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="e4"]
+position = Vector2(70.5, 70)
+scale = Vector2(-7.040016, 7.4583273)
+shape = SubResource("RectangleShape2D_mgc1s")
+
+[node name="f4" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="f4"]
+position = Vector2(215.5, 66)
+scale = Vector2(7.3210673, 7.375036)
+shape = SubResource("RectangleShape2D_rq8yp")
+
+[node name="g4" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="g4"]
+position = Vector2(361.5, 68)
+scale = Vector2(7.0114365, 7.3605604)
+shape = SubResource("RectangleShape2D_tngv2")
+
+[node name="h4" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="h4"]
+position = Vector2(514.5, 67)
+scale = Vector2(7.2725296, 7.6980085)
+shape = SubResource("RectangleShape2D_c4ttu")
+
+[node name="a5" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="a5"]
+position = Vector2(-520, -85.75)
+shape = SubResource("RectangleShape2D_psm7c")
+
+[node name="b5" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="b5"]
+position = Vector2(-372.5288, -86.8313)
+scale = Vector2(6.9057636, 7.766268)
+shape = SubResource("RectangleShape2D_8l818")
+
+[node name="c5" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="c5"]
+position = Vector2(-226.50002, -87)
+scale = Vector2(7.043013, 7.3653445)
+shape = SubResource("RectangleShape2D_jqgjh")
+
+[node name="d5" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="d5"]
+position = Vector2(-78.5, -87)
+scale = Vector2(7.6452627, 7.4884496)
+shape = SubResource("RectangleShape2D_vf5bc")
+
+[node name="e5" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="e5"]
+position = Vector2(67.5, -81)
+scale = Vector2(-7.040016, 7.4583273)
+shape = SubResource("RectangleShape2D_mgc1s")
+
+[node name="f5" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="f5"]
+position = Vector2(212.5, -85)
+scale = Vector2(7.3210673, 7.375036)
+shape = SubResource("RectangleShape2D_rq8yp")
+
+[node name="g5" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="g5"]
+position = Vector2(358.5, -83)
+scale = Vector2(7.0114365, 7.3605604)
+shape = SubResource("RectangleShape2D_tngv2")
+
+[node name="h5" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="h5"]
+position = Vector2(511.50003, -84)
+scale = Vector2(7.2725296, 7.6980085)
+shape = SubResource("RectangleShape2D_c4ttu")
+
+[node name="a6" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="a6"]
+position = Vector2(-517, -238.75)
+shape = SubResource("RectangleShape2D_psm7c")
+
+[node name="b6" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="b6"]
+position = Vector2(-369.5288, -239.8313)
+scale = Vector2(6.9057636, 7.766268)
+shape = SubResource("RectangleShape2D_8l818")
+
+[node name="c6" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="c6"]
+position = Vector2(-223.50002, -240)
+scale = Vector2(7.043013, 7.3653445)
+shape = SubResource("RectangleShape2D_jqgjh")
+
+[node name="d6" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="d6"]
+position = Vector2(-75.5, -240)
+scale = Vector2(7.6452627, 7.4884496)
+shape = SubResource("RectangleShape2D_vf5bc")
+
+[node name="e6" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="e6"]
+position = Vector2(70.5, -234)
+scale = Vector2(-7.040016, 7.4583273)
+shape = SubResource("RectangleShape2D_mgc1s")
+
+[node name="f6" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="f6"]
+position = Vector2(215.5, -238)
+scale = Vector2(7.3210673, 7.375036)
+shape = SubResource("RectangleShape2D_rq8yp")
+
+[node name="g6" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="g6"]
+position = Vector2(361.5, -236)
+scale = Vector2(7.0114365, 7.3605604)
+shape = SubResource("RectangleShape2D_tngv2")
+
+[node name="h6" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="h6"]
+position = Vector2(514.5, -237)
+scale = Vector2(7.2725296, 7.6980085)
+shape = SubResource("RectangleShape2D_c4ttu")
+
+[node name="a7" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="a7"]
+position = Vector2(-519, -381.75)
+shape = SubResource("RectangleShape2D_psm7c")
+
+[node name="b7" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="b7"]
+position = Vector2(-371.5288, -382.8313)
+scale = Vector2(6.9057636, 7.766268)
+shape = SubResource("RectangleShape2D_8l818")
+
+[node name="c7" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="c7"]
+position = Vector2(-225.50002, -383)
+scale = Vector2(7.043013, 7.3653445)
+shape = SubResource("RectangleShape2D_jqgjh")
+
+[node name="d7" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="d7"]
+position = Vector2(-77.5, -383)
+scale = Vector2(7.6452627, 7.4884496)
+shape = SubResource("RectangleShape2D_vf5bc")
+
+[node name="e7" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="e7"]
+position = Vector2(68.5, -377)
+scale = Vector2(-7.040016, 7.4583273)
+shape = SubResource("RectangleShape2D_mgc1s")
+
+[node name="f7" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="f7"]
+position = Vector2(213.5, -381)
+scale = Vector2(7.3210673, 7.375036)
+shape = SubResource("RectangleShape2D_rq8yp")
+
+[node name="g7" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="g7"]
+position = Vector2(359.5, -379)
+scale = Vector2(7.0114365, 7.3605604)
+shape = SubResource("RectangleShape2D_tngv2")
+
+[node name="h7" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="h7"]
+position = Vector2(512.5, -380)
+scale = Vector2(7.2725296, 7.6980085)
+shape = SubResource("RectangleShape2D_c4ttu")
+
+[node name="a8" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="a8"]
+position = Vector2(-516, -535.75)
+shape = SubResource("RectangleShape2D_psm7c")
+
+[node name="b8" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="b8"]
+position = Vector2(-368.5288, -536.8313)
+scale = Vector2(6.9057636, 7.766268)
+shape = SubResource("RectangleShape2D_8l818")
+
+[node name="c8" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="c8"]
+position = Vector2(-222.50002, -537)
+scale = Vector2(7.043013, 7.3653445)
+shape = SubResource("RectangleShape2D_jqgjh")
+
+[node name="d8" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="d8"]
+position = Vector2(-74.5, -537)
+scale = Vector2(7.6452627, 7.4884496)
+shape = SubResource("RectangleShape2D_vf5bc")
+
+[node name="e8" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="e8"]
+position = Vector2(71.5, -531)
+scale = Vector2(-7.040016, 7.4583273)
+shape = SubResource("RectangleShape2D_mgc1s")
+
+[node name="f8" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="f8"]
+position = Vector2(216.5, -535)
+scale = Vector2(7.3210673, 7.375036)
+shape = SubResource("RectangleShape2D_rq8yp")
+
+[node name="g8" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="g8"]
+position = Vector2(362.5, -533)
+scale = Vector2(7.0114365, 7.3605604)
+shape = SubResource("RectangleShape2D_tngv2")
+
+[node name="h8" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="h8"]
+position = Vector2(515.5, -534)
+scale = Vector2(7.2725296, 7.6980085)
+shape = SubResource("RectangleShape2D_c4ttu")
+
+[connection signal="input_event" from="a1" to="." method="_on_a_1_input_event"]
+[connection signal="input_event" from="b1" to="." method="_on_b_1_input_event"]
+[connection signal="input_event" from="c1" to="." method="_on_c_1_input_event"]
+[connection signal="input_event" from="d1" to="." method="_on_d_1_input_event"]
+[connection signal="input_event" from="e1" to="." method="_on_e_1_input_event"]
+[connection signal="input_event" from="f1" to="." method="_on_f_1_input_event"]
+[connection signal="input_event" from="g1" to="." method="_on_g_1_input_event"]
+[connection signal="input_event" from="h1" to="." method="_on_h_1_input_event"]
+[connection signal="input_event" from="a2" to="." method="_on_a_2_input_event"]
+[connection signal="input_event" from="b2" to="." method="_on_b_2_input_event"]
+[connection signal="input_event" from="c2" to="." method="_on_c_2_input_event"]
+[connection signal="input_event" from="d2" to="." method="_on_d_2_input_event"]
+[connection signal="input_event" from="e2" to="." method="_on_e_2_input_event"]
+[connection signal="input_event" from="f2" to="." method="_on_f_2_input_event"]
+[connection signal="input_event" from="g2" to="." method="_on_g_2_input_event"]
+[connection signal="input_event" from="h2" to="." method="_on_h_2_input_event"]
+[connection signal="input_event" from="a3" to="." method="_on_a_3_input_event"]
+[connection signal="input_event" from="b3" to="." method="_on_b_3_input_event"]
+[connection signal="input_event" from="c3" to="." method="_on_c_3_input_event"]
+[connection signal="input_event" from="d3" to="." method="_on_d_3_input_event"]
+[connection signal="input_event" from="e3" to="." method="_on_e_3_input_event"]
+[connection signal="input_event" from="f3" to="." method="_on_f_3_input_event"]
+[connection signal="input_event" from="g3" to="." method="_on_g_3_input_event"]
+[connection signal="input_event" from="h3" to="." method="_on_h_3_input_event"]
+[connection signal="input_event" from="a4" to="." method="_on_a_4_input_event"]
+[connection signal="input_event" from="b4" to="." method="_on_b_4_input_event"]
+[connection signal="input_event" from="c4" to="." method="_on_c_4_input_event"]
+[connection signal="input_event" from="d4" to="." method="_on_d_4_input_event"]
+[connection signal="input_event" from="e4" to="." method="_on_e_4_input_event"]
+[connection signal="input_event" from="f4" to="." method="_on_f_4_input_event"]
+[connection signal="input_event" from="g4" to="." method="_on_g_4_input_event"]
+[connection signal="input_event" from="h4" to="." method="_on_h_4_input_event"]
+[connection signal="input_event" from="a5" to="." method="_on_a_5_input_event"]
+[connection signal="input_event" from="b5" to="." method="_on_b_5_input_event"]
+[connection signal="input_event" from="c5" to="." method="_on_c_5_input_event"]
+[connection signal="input_event" from="d5" to="." method="_on_d_5_input_event"]
+[connection signal="input_event" from="e5" to="." method="_on_e_5_input_event"]
+[connection signal="input_event" from="f5" to="." method="_on_f_5_input_event"]
+[connection signal="input_event" from="g5" to="." method="_on_g_5_input_event"]
+[connection signal="input_event" from="h5" to="." method="_on_h_5_input_event"]
+[connection signal="input_event" from="a6" to="." method="_on_a_6_input_event"]
+[connection signal="input_event" from="b6" to="." method="_on_b_6_input_event"]
+[connection signal="input_event" from="c6" to="." method="_on_c_6_input_event"]
+[connection signal="input_event" from="d6" to="." method="_on_d_6_input_event"]
+[connection signal="input_event" from="e6" to="." method="_on_e_6_input_event"]
+[connection signal="input_event" from="f6" to="." method="_on_f_6_input_event"]
+[connection signal="input_event" from="g6" to="." method="_on_g_6_input_event"]
+[connection signal="input_event" from="h6" to="." method="_on_h_6_input_event"]
+[connection signal="input_event" from="a7" to="." method="_on_a_7_input_event"]
+[connection signal="input_event" from="b7" to="." method="_on_b_7_input_event"]
+[connection signal="input_event" from="c7" to="." method="_on_c_7_input_event"]
+[connection signal="input_event" from="d7" to="." method="_on_d_7_input_event"]
+[connection signal="input_event" from="e7" to="." method="_on_e_7_input_event"]
+[connection signal="input_event" from="f7" to="." method="_on_f_7_input_event"]
+[connection signal="input_event" from="g7" to="." method="_on_g_7_input_event"]
+[connection signal="input_event" from="h7" to="." method="_on_h_7_input_event"]
+[connection signal="input_event" from="a8" to="." method="_on_a_8_input_event"]
+[connection signal="input_event" from="b8" to="." method="_on_b_8_input_event"]
+[connection signal="input_event" from="c8" to="." method="_on_c_8_input_event"]
+[connection signal="input_event" from="d8" to="." method="_on_d_8_input_event"]
+[connection signal="input_event" from="e8" to="." method="_on_e_8_input_event"]
+[connection signal="input_event" from="f8" to="." method="_on_f_8_input_event"]
+[connection signal="input_event" from="g8" to="." method="_on_g_8_input_event"]
+[connection signal="input_event" from="h8" to="." method="_on_h_8_input_event"]

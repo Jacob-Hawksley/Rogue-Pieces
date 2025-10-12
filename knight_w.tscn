@@ -1,6 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://cl1vsbt2ofjcw"]
+[gd_scene load_steps=5 format=3 uid="uid://cl1vsbt2ofjcw"]
 
 [ext_resource type="Texture2D" uid="uid://b6wbp1umrj0sx" path="res://images/knightw.png" id="1_g12rv"]
+[ext_resource type="Script" uid="uid://dxthvhkwxxd3d" path="res://knight_w.gd" id="2_da3we"]
+[ext_resource type="Script" uid="uid://dybijs4ukbinw" path="res://knight_w_area.gd" id="2_eoaws"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_eoaws"]
 animations = [{
@@ -15,3 +17,10 @@ animations = [{
 
 [node name="KnightW" type="AnimatedSprite2D"]
 sprite_frames = SubResource("SpriteFrames_eoaws")
+script = ExtResource("2_da3we")
+
+[node name="KnightWArea" type="Area2D" parent="."]
+script = ExtResource("2_eoaws")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="KnightWArea"]
+polygon = PackedVector2Array(-62, 105, 84, 107, 86, 44, 77, 45, 76, -63, 56, -106, -14, -104, -83, -36, -83, 5, -64, 26)

@@ -1,6 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://do2e1nj1cjo5k"]
+[gd_scene load_steps=5 format=3 uid="uid://do2e1nj1cjo5k"]
 
 [ext_resource type="Texture2D" uid="uid://dss4bc271srmv" path="res://images/queenw.png" id="1_c46pt"]
+[ext_resource type="Script" uid="uid://dqbfbkuytoxl7" path="res://queen_w_area.gd" id="2_y4x7j"]
+[ext_resource type="Script" uid="uid://bi1h5fnriy242" path="res://queen_w.gd" id="2_yyolu"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_y4x7j"]
 animations = [{
@@ -15,3 +17,10 @@ animations = [{
 
 [node name="QueenW" type="AnimatedSprite2D"]
 sprite_frames = SubResource("SpriteFrames_y4x7j")
+script = ExtResource("2_yyolu")
+
+[node name="QueenWArea" type="Area2D" parent="."]
+script = ExtResource("2_y4x7j")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="QueenWArea"]
+polygon = PackedVector2Array(-76, 104, 78, 104, 76, 16, 97, -27, 106, -92, 95, -105, -94, -105, -104, -90, -94, -30, -76, 17)

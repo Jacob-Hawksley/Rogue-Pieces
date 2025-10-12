@@ -1,6 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://cf65f0i1e3p3v"]
+[gd_scene load_steps=5 format=3 uid="uid://cf65f0i1e3p3v"]
 
 [ext_resource type="Texture2D" uid="uid://drk05y2cnt18w" path="res://images/bishopw.png" id="1_sdjlj"]
+[ext_resource type="Script" uid="uid://diqyhri3umbdf" path="res://bishop_w.gd" id="2_63lud"]
+[ext_resource type="Script" uid="uid://dgmlphvcg3knk" path="res://bishop_w_area.gd" id="2_tbsxw"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_tbsxw"]
 animations = [{
@@ -15,3 +17,10 @@ animations = [{
 
 [node name="BishopW" type="AnimatedSprite2D"]
 sprite_frames = SubResource("SpriteFrames_tbsxw")
+script = ExtResource("2_63lud")
+
+[node name="BishopWArea" type="Area2D" parent="."]
+script = ExtResource("2_tbsxw")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="BishopWArea"]
+polygon = PackedVector2Array(-75, 103, 75, 104, 75, 46, 55, 46, 55, 14, 66, 15, 65, 5, 76, 6, 74, -47, 25, -104, -25, -105, -75, -44, -76, -1, -66, 4, -66, 16, -56, 15, -57, 24, -56, 46, -75, 45)

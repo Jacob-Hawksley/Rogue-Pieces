@@ -1,6 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://08o1ftiwdqun"]
+[gd_scene load_steps=5 format=3 uid="uid://08o1ftiwdqun"]
 
 [ext_resource type="Texture2D" uid="uid://b5m25k8lortpr" path="res://images/rookw.png" id="1_kalhb"]
+[ext_resource type="Script" uid="uid://u4fsnrrg87ci" path="res://rook_w_area.gd" id="2_g6mff"]
+[ext_resource type="Script" uid="uid://dxn2a3yedkofe" path="res://rook_w.gd" id="2_vq34p"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_g6mff"]
 animations = [{
@@ -15,3 +17,10 @@ animations = [{
 
 [node name="RookW" type="AnimatedSprite2D"]
 sprite_frames = SubResource("SpriteFrames_g6mff")
+script = ExtResource("2_vq34p")
+
+[node name="RookWArea" type="Area2D" parent="."]
+script = ExtResource("2_g6mff")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RookWArea"]
+polygon = PackedVector2Array(-75, 105, 75, 105, 76, 45, 66, 46, 66, -35, 75, -35, 76, -105, -74, -104, -77, -33, -65, -35, -65, 47, -76, 46)

@@ -103,7 +103,7 @@ var defaultboard = {
 	'e3':null,
 	'e4':null,
 	'e5':null,
-	'e6':'wpawn',
+	'e6':null,
 	'e7':null,
 	'e8':null,
 	'f1':null,

@@ -8,7 +8,16 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	if highlighted and Main.selected != null:
+		checkforspaces(tile)
+		get_parent().position = Main.boardpositions[Main.selected]
+		Main.currentboard[Main.selected] = 'wpawn'
+		tile = Main.selected
+		highlighted = false
+		Main.selected = null
+		Main.spaces = []
+		
+		
 
 
 
@@ -16,9 +25,10 @@ func _process(delta: float) -> void:
 func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event.is_action_pressed("left click"):
 		highlighted = true
-		print(checkforspaces(tile))
+		checkforspaces(tile)
 
 func checkforspaces(space):
+	Main.spaces = []
 	var newletter = space[0]
 	var newnumber = int(space[1]) + 1
 	if Main.currentboard[newletter+str(newnumber)] == null:

@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://d0krkc2vw1djo"]
+
+[ext_resource type="Texture2D" uid="uid://crfnuso0wjj1u" path="res://images/Red-dot.png" id="1_vnqkt"]
+[ext_resource type="Script" uid="uid://5bae0dymunqh" path="res://red_dot.gd" id="2_nuboo"]
+
+[node name="Red-Dot" type="Sprite2D"]
+texture = ExtResource("1_vnqkt")
+script = ExtResource("2_nuboo")

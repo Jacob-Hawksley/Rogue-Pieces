@@ -1,7 +1,7 @@
 extends Node
-
+var highlighted = null
 var spaces = []
-var selected = ''
+var selected = null
 var boardpositions = {
 	'a1': Vector2(-525,525),
 	'b1': Vector2(-375,525),

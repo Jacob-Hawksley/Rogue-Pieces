@@ -24,3 +24,5 @@ script = ExtResource("2_eoaws")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="KnightWArea"]
 polygon = PackedVector2Array(-62, 105, 84, 107, 86, 44, 77, 45, 76, -63, 56, -106, -14, -104, -83, -36, -83, 5, -64, 26)
+
+[connection signal="input_event" from="KnightWArea" to="KnightWArea" method="_on_input_event"]

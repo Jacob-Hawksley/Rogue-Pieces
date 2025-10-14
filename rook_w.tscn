@@ -24,3 +24,5 @@ script = ExtResource("2_g6mff")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RookWArea"]
 polygon = PackedVector2Array(-75, 105, 75, 105, 76, 45, 66, 46, 66, -35, 75, -35, 76, -105, -74, -104, -77, -33, -65, -35, -65, 47, -76, 46)
+
+[connection signal="input_event" from="RookWArea" to="RookWArea" method="_on_input_event"]

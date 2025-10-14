@@ -2,6 +2,7 @@ extends AnimatedSprite2D
 @export var dot:PackedScene = preload("res://red_dot.tscn")
 var dots = true
 var dot_counter = 0
+var savedhighlight
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	reset()
@@ -17,9 +18,9 @@ func _process(delta: float) -> void:
 			add_child(d)
 			d.tile = i
 			dot_counter += 1
-	if Main.selected:
+	if savedhighlight != Main.highlighted:
 		dot_counter = 0
-	
+		savedhighlight = Main.highlighted
 
 func _on_a_1_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event.is_action_pressed("left click"):

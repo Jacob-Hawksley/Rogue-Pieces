@@ -1,5 +1,4 @@
 extends Area2D
-var highlighted = false
 var tile 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -8,14 +7,17 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if highlighted and Main.selected != null:
+	if Main.highlighted == tile and Main.selected != null:
 		checkforspaces(tile)
-		get_parent().position = Main.boardpositions[Main.selected]
-		Main.currentboard[Main.selected] = 'wpawn'
+		Main.board[Main.selected] = 'wpawn'
+		Main.board[tile] = null
+		Main.currentboard[tile] = null
 		tile = Main.selected
-		highlighted = false
+		Main.highlighted = null
 		Main.selected = null
 		Main.spaces = []
+		get_parent().queue_free()
+		
 		
 		
 
@@ -24,8 +26,11 @@ func _process(delta: float) -> void:
 
 func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event.is_action_pressed("left click"):
-		highlighted = true
 		checkforspaces(tile)
+		Main.highlighted = null
+		Main.highlighted = tile
+		
+		
 
 func checkforspaces(space):
 	Main.spaces = []

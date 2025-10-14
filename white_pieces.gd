@@ -51,3 +51,4 @@ func _process(_delta: float) -> void:
 			Main.currentboard[i] = 'wqueen'
 			q.position = Main.boardpositions[i]
 			q.get_child(0).tile = i
+	

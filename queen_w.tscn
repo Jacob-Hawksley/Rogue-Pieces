@@ -24,3 +24,5 @@ script = ExtResource("2_y4x7j")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="QueenWArea"]
 polygon = PackedVector2Array(-76, 104, 78, 104, 76, 16, 97, -27, 106, -92, 95, -105, -94, -105, -104, -90, -94, -30, -76, 17)
+
+[connection signal="input_event" from="QueenWArea" to="QueenWArea" method="_on_input_event"]

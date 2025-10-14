@@ -24,3 +24,5 @@ script = ExtResource("2_tbsxw")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="BishopWArea"]
 polygon = PackedVector2Array(-75, 103, 75, 104, 75, 46, 55, 46, 55, 14, 66, 15, 65, 5, 76, 6, 74, -47, 25, -104, -25, -105, -75, -44, -76, -1, -66, 4, -66, 16, -56, 15, -57, 24, -56, 46, -75, 45)
+
+[connection signal="input_event" from="BishopWArea" to="BishopWArea" method="_on_input_event"]

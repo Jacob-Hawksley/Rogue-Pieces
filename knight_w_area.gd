@@ -34,13 +34,61 @@ func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 
 func checkforspaces(space):
 	Main.spaces = []
-	var newletter = space[0]
-	var newnumber = int(space[1]) + 1
-	if Main.currentboard[newletter+str(newnumber)] == null:
-		Main.spaces.append(newletter+str(newnumber))
-		if int(space[1]) == 2:
-			newnumber += 1
-			if Main.currentboard[newletter+str(newnumber)] == null:
-				Main.spaces.append(newletter+str(newnumber))
-
+	var newletter = ord(space[0])
+	var newnumber = int(space[1])
+	newletter += 1
+	newnumber += 2
+	if Main.currentboard.has(char(newletter)+str(newnumber)):
+		if Main.currentboard[char(newletter)+str(newnumber)] == null:
+			Main.spaces.append(char(newletter)+str(newnumber))
+	newletter = ord(space[0])
+	newnumber = int(space[1])
+	newletter += 1
+	newnumber += -2
+	if Main.currentboard.has(char(newletter)+str(newnumber)):
+		if Main.currentboard[char(newletter)+str(newnumber)] == null:
+			Main.spaces.append(char(newletter)+str(newnumber))
+	newletter = ord(space[0])
+	newnumber = int(space[1])
+	newletter += -1
+	newnumber += 2
+	if Main.currentboard.has(char(newletter)+str(newnumber)):
+		if Main.currentboard[char(newletter)+str(newnumber)] == null:
+			Main.spaces.append(char(newletter)+str(newnumber))
+	newletter = ord(space[0])
+	newnumber = int(space[1])
+	newletter += -1
+	newnumber += -2
+	if Main.currentboard.has(char(newletter)+str(newnumber)):
+		if Main.currentboard[char(newletter)+str(newnumber)] == null:
+			Main.spaces.append(char(newletter)+str(newnumber))
+	newletter = ord(space[0])
+	newnumber = int(space[1])
+	newletter += 2
+	newnumber += 1
+	if Main.currentboard.has(char(newletter)+str(newnumber)):
+		if Main.currentboard[char(newletter)+str(newnumber)] == null:
+			Main.spaces.append(char(newletter)+str(newnumber))
+	newletter = ord(space[0])
+	newnumber = int(space[1])
+	newletter += 2
+	newnumber += -1
+	if Main.currentboard.has(char(newletter)+str(newnumber)):
+		if Main.currentboard[char(newletter)+str(newnumber)] == null:
+			Main.spaces.append(char(newletter)+str(newnumber))
+	newletter = ord(space[0])
+	newnumber = int(space[1])
+	newletter += -2
+	newnumber += 1
+	if Main.currentboard.has(char(newletter)+str(newnumber)):
+		if Main.currentboard[char(newletter)+str(newnumber)] == null:
+			Main.spaces.append(char(newletter)+str(newnumber))
+	newletter = ord(space[0])
+	newnumber = int(space[1])
+	newletter += -2
+	newnumber += -1
+	if Main.currentboard.has(char(newletter)+str(newnumber)):
+		if Main.currentboard[char(newletter)+str(newnumber)] == null:
+			Main.spaces.append(char(newletter)+str(newnumber))
+			
 	return(Main.spaces)

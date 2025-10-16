@@ -4,5 +4,6 @@
 [ext_resource type="Script" uid="uid://5bae0dymunqh" path="res://red_dot.gd" id="2_nuboo"]
 
 [node name="Red-Dot" type="Sprite2D"]
+z_index = 3
 texture = ExtResource("1_vnqkt")
 script = ExtResource("2_nuboo")

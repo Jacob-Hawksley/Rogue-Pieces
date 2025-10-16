@@ -22,7 +22,7 @@ func _process(delta: float) -> void:
 
 
 func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
-	if event.is_action_pressed("left click"):
+	if event.is_action_pressed("left click") and Main.turn == 'white':
 		checkforspaces(tile)
 		Main.highlighted = null
 		Main.highlighted = tile

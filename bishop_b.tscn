@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://lhkm2nofn8aj"]
+
+[ext_resource type="Texture2D" uid="uid://cp4ipk5uaubj5" path="res://images/bishopb.png" id="1_73kdb"]
+[ext_resource type="Script" uid="uid://ckyxhume1p61s" path="res://bishop_b_area.gd" id="2_4um6b"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4um6b"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_73kdb")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="BishopB" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_4um6b")
+
+[node name="BishopBArea" type="Area2D" parent="."]
+script = ExtResource("2_4um6b")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="BishopBArea"]
+polygon = PackedVector2Array(-75, 103, 75, 104, 75, 46, 55, 46, 55, 14, 66, 15, 65, 5, 76, 6, 74, -47, 25, -104, -25, -105, -75, -44, -76, -1, -66, 4, -66, 16, -56, 15, -57, 24, -56, 46, -75, 45)
+
+[connection signal="input_event" from="BishopBArea" to="BishopBArea" method="_on_input_event"]

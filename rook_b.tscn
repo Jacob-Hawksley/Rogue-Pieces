@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://dd6lb465iqw3b"]
+
+[ext_resource type="Texture2D" uid="uid://cqltdfcttq05f" path="res://images/rookb.png" id="1_hhauc"]
+[ext_resource type="Script" uid="uid://cybpoo2wc2kds" path="res://rook_b_area.gd" id="2_bkx13"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bkx13"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_hhauc")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="RookB" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_bkx13")
+
+[node name="RookBArea" type="Area2D" parent="."]
+script = ExtResource("2_bkx13")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RookBArea"]
+polygon = PackedVector2Array(-75, 105, 75, 105, 76, 45, 66, 46, 66, -35, 75, -35, 76, -105, -74, -104, -77, -33, -65, -35, -65, 47, -76, 46)
+
+[connection signal="input_event" from="RookBArea" to="RookBArea" method="_on_input_event"]

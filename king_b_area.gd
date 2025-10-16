@@ -10,7 +10,7 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if Main.highlighted == tile and Main.selected != null:
 		checkforspaces(tile)
-		Main.board[Main.selected] = 'wking'
+		Main.board[Main.selected] = 'bking'
 		Main.board[tile] = null
 		Main.currentboard[tile] = null
 		tile = Main.selected
@@ -23,7 +23,7 @@ func _process(delta: float) -> void:
 
 
 func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
-	if event.is_action_pressed("left click") and Main.turn == 'white':
+	if event.is_action_pressed("left click") and Main.turn == 'black':
 		checkforspaces(tile)
 		Main.highlighted = null
 		Main.highlighted = tile

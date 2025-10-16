@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://cp73magymmcvu"]
+[gd_scene load_steps=5 format=3 uid="uid://cp73magymmcvu"]
 
 [ext_resource type="Script" uid="uid://clvnkem8iytt0" path="res://main.gd" id="1_ig7tw"]
 [ext_resource type="PackedScene" uid="uid://cxp4bb62ir1ov" path="res://board.tscn" id="2_0xm2m"]
 [ext_resource type="Script" uid="uid://difvhm2yxcjvm" path="res://white_pieces.gd" id="3_h2yge"]
+[ext_resource type="Script" uid="uid://dyy3qmcit3eo" path="res://black_pieces.gd" id="4_1bvp3"]
 
 [node name="Main" type="Node"]
 script = ExtResource("1_ig7tw")
@@ -15,3 +16,6 @@ zoom = Vector2(0.5, 0.5)
 
 [node name="WhitePieces" type="Node" parent="."]
 script = ExtResource("3_h2yge")
+
+[node name="BlackPieces" type="Node" parent="."]
+script = ExtResource("4_1bvp3")

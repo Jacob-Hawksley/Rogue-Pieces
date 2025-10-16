@@ -22,7 +22,7 @@ func _process(delta: float) -> void:
 
 
 func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
-	if event.is_action_pressed("left click"):
+	if event.is_action_pressed("left click") and Main.turn == 'white':
 		checkforspaces(tile)
 		Main.highlighted = null
 		Main.highlighted = tile
@@ -40,6 +40,8 @@ func checkforspaces(space):
 		if Main.currentboard.has(char(newletter)+str(newnumber)):
 			if Main.currentboard[char(newletter)+str(newnumber)] == null:
 				Main.spaces.append(char(newletter)+str(newnumber))
+			elif Main.currentboard[char(newletter)+str(newnumber)][0] == 'b':
+				Main.spaces.append(char(newletter)+str(newnumber))
 			else:
 				break
 	newletter = ord(space[0])
@@ -49,6 +51,8 @@ func checkforspaces(space):
 		newnumber -= 1
 		if Main.currentboard.has(char(newletter)+str(newnumber)):
 			if Main.currentboard[char(newletter)+str(newnumber)] == null:
+				Main.spaces.append(char(newletter)+str(newnumber))
+			elif Main.currentboard[char(newletter)+str(newnumber)][0] == 'b':
 				Main.spaces.append(char(newletter)+str(newnumber))
 			else:
 				break
@@ -60,6 +64,8 @@ func checkforspaces(space):
 		if Main.currentboard.has(char(newletter)+str(newnumber)):
 			if Main.currentboard[char(newletter)+str(newnumber)] == null:
 				Main.spaces.append(char(newletter)+str(newnumber))
+			elif Main.currentboard[char(newletter)+str(newnumber)][0] == 'b':
+				Main.spaces.append(char(newletter)+str(newnumber))
 			else:
 				break
 	newletter = ord(space[0])
@@ -69,6 +75,8 @@ func checkforspaces(space):
 		newnumber -= 1
 		if Main.currentboard.has(char(newletter)+str(newnumber)):
 			if Main.currentboard[char(newletter)+str(newnumber)] == null:
+				Main.spaces.append(char(newletter)+str(newnumber))
+			elif Main.currentboard[char(newletter)+str(newnumber)][0] == 'b':
 				Main.spaces.append(char(newletter)+str(newnumber))
 			else:
 				break
@@ -80,6 +88,8 @@ func checkforspaces(space):
 		if Main.currentboard.has(char(newletter)+str(newnumber)):
 			if Main.currentboard[char(newletter)+str(newnumber)] == null:
 				Main.spaces.append(char(newletter)+str(newnumber))
+			elif Main.currentboard[char(newletter)+str(newnumber)][0] == 'b':
+				Main.spaces.append(char(newletter)+str(newnumber))
 			else:
 				break
 	newletter = ord(space[0])
@@ -88,6 +98,8 @@ func checkforspaces(space):
 		newletter = newletter + 1 
 		if Main.currentboard.has(char(newletter)+str(newnumber)):
 			if Main.currentboard[char(newletter)+str(newnumber)] == null:
+				Main.spaces.append(char(newletter)+str(newnumber))
+			elif Main.currentboard[char(newletter)+str(newnumber)][0] == 'b':
 				Main.spaces.append(char(newletter)+str(newnumber))
 			else:
 				break
@@ -98,6 +110,8 @@ func checkforspaces(space):
 		if Main.currentboard.has(char(newletter)+str(newnumber)):
 			if Main.currentboard[char(newletter)+str(newnumber)] == null:
 				Main.spaces.append(char(newletter)+str(newnumber))
+			elif Main.currentboard[char(newletter)+str(newnumber)][0] == 'b':
+				Main.spaces.append(char(newletter)+str(newnumber))
 			else:
 				break
 	newletter = ord(space[0])
@@ -106,6 +120,8 @@ func checkforspaces(space):
 		newletter = newletter - 1 
 		if Main.currentboard.has(char(newletter)+str(newnumber)):
 			if Main.currentboard[char(newletter)+str(newnumber)] == null:
+				Main.spaces.append(char(newletter)+str(newnumber))
+			elif Main.currentboard[char(newletter)+str(newnumber)][0] == 'b':
 				Main.spaces.append(char(newletter)+str(newnumber))
 			else:
 				break

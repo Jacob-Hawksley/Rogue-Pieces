@@ -9,42 +9,44 @@ extends Node
 
 func _process(_delta: float) -> void:
 	for i in Main.currentboard:
-		if Main.board[i] == 'wpawn' and Main.currentboard[i] == null:
+		if Main.board[i] == null:
+			Main.currentboard[i] = null
+		if Main.board[i] == 'wpawn' and Main.currentboard[i] != 'wpawn':
 			var p = pawn.instantiate()
 			add_child(p)
 			p.scale = Vector2(0.75,0.75)
 			Main.currentboard[i] = 'wpawn'
 			p.position = Main.boardpositions[i]
 			p.get_child(0).tile = i
-		if Main.board[i] == 'wrook' and Main.currentboard[i] == null:
+		if Main.board[i] == 'wrook' and Main.currentboard[i] != 'wrook':
 			var r = rook.instantiate()
 			add_child(r)
 			r.scale = Vector2(0.75,0.75)
 			Main.currentboard[i] = 'wrook'
 			r.position = Main.boardpositions[i]
 			r.get_child(0).tile = i
-		if Main.board[i] == 'wking' and Main.currentboard[i] == null:
+		if Main.board[i] == 'wking' and Main.currentboard[i] != 'wking':
 			var k = king.instantiate()
 			add_child(k)
 			k.scale = Vector2(0.75,0.75)
 			Main.currentboard[i] = 'wking'
 			k.position = Main.boardpositions[i]
 			k.get_child(0).tile = i
-		if Main.board[i] == 'wbishop' and Main.currentboard[i] == null:
+		if Main.board[i] == 'wbishop' and Main.currentboard[i] != 'wbishop':
 			var b = bishop.instantiate()
 			add_child(b)
 			b.scale = Vector2(0.75,0.75)
 			Main.currentboard[i] = 'wbishop'
 			b.position = Main.boardpositions[i]
 			b.get_child(0).tile = i
-		if Main.board[i] == 'wknight' and Main.currentboard[i] == null:
+		if Main.board[i] == 'wknight' and Main.currentboard[i] != 'wknight':
 			var kn = knight.instantiate()
 			add_child(kn)
 			kn.scale = Vector2(0.75,0.75)
 			Main.currentboard[i] = 'wknight'
 			kn.position = Main.boardpositions[i]
 			kn.get_child(0).tile = i
-		if Main.board[i] == 'wqueen' and Main.currentboard[i] == null:
+		if Main.board[i] == 'wqueen' and Main.currentboard[i] != 'wqueen':
 			var q = queen.instantiate()
 			add_child(q)
 			q.scale = Vector2(0.75,0.75)

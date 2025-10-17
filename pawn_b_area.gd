@@ -1,5 +1,6 @@
 extends Area2D
 var tile 
+var piece = 'bpawn'
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
@@ -9,15 +10,17 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if Main.highlighted == tile and Main.selected != null:
 		checkforspaces(tile)
-		Main.board[Main.selected] = 'bpawn'
+		Main.board[Main.selected] = piece
 		Main.board[tile] = null
 		Main.currentboard[tile] = null
 		tile = Main.selected
 		Main.highlighted = null
 		Main.selected = null
 		Main.spaces = []
+		Main.turn = 'white'
 		get_parent().queue_free()
-
+	if Main.currentboard[tile] != piece:
+		get_parent().queue_free()
 
 
 

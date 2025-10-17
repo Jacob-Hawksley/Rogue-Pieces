@@ -1,5 +1,6 @@
 extends Area2D
 var tile 
+var piece = 'wqueen'
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
@@ -9,15 +10,15 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if Main.highlighted == tile and Main.selected != null:
 		checkforspaces(tile)
-		Main.board[Main.selected] = 'wqueen'
+		Main.board[Main.selected] = piece
 		Main.board[tile] = null
-		Main.currentboard[tile] = null
-		tile = Main.selected
-		Main.highlighted = null
 		Main.selected = null
 		Main.spaces = []
+		Main.highlighted = null
+		Main.turn = 'black'
 		get_parent().queue_free()
-
+	if Main.currentboard[tile] != piece:
+		get_parent().queue_free()
 
 
 
@@ -42,6 +43,7 @@ func checkforspaces(space):
 				Main.spaces.append(char(newletter)+str(newnumber))
 			elif Main.currentboard[char(newletter)+str(newnumber)][0] == 'b':
 				Main.spaces.append(char(newletter)+str(newnumber))
+				break
 			else:
 				break
 	newletter = ord(space[0])
@@ -54,6 +56,7 @@ func checkforspaces(space):
 				Main.spaces.append(char(newletter)+str(newnumber))
 			elif Main.currentboard[char(newletter)+str(newnumber)][0] == 'b':
 				Main.spaces.append(char(newletter)+str(newnumber))
+				break
 			else:
 				break
 	newletter = ord(space[0])
@@ -66,6 +69,7 @@ func checkforspaces(space):
 				Main.spaces.append(char(newletter)+str(newnumber))
 			elif Main.currentboard[char(newletter)+str(newnumber)][0] == 'b':
 				Main.spaces.append(char(newletter)+str(newnumber))
+				break
 			else:
 				break
 	newletter = ord(space[0])
@@ -78,6 +82,7 @@ func checkforspaces(space):
 				Main.spaces.append(char(newletter)+str(newnumber))
 			elif Main.currentboard[char(newletter)+str(newnumber)][0] == 'b':
 				Main.spaces.append(char(newletter)+str(newnumber))
+				break
 			else:
 				break
 	newletter = ord(space[0])
@@ -90,6 +95,7 @@ func checkforspaces(space):
 				Main.spaces.append(char(newletter)+str(newnumber))
 			elif Main.currentboard[char(newletter)+str(newnumber)][0] == 'b':
 				Main.spaces.append(char(newletter)+str(newnumber))
+				break
 			else:
 				break
 	newletter = ord(space[0])
@@ -101,6 +107,7 @@ func checkforspaces(space):
 				Main.spaces.append(char(newletter)+str(newnumber))
 			elif Main.currentboard[char(newletter)+str(newnumber)][0] == 'b':
 				Main.spaces.append(char(newletter)+str(newnumber))
+				break
 			else:
 				break
 	newletter = ord(space[0])
@@ -112,6 +119,7 @@ func checkforspaces(space):
 				Main.spaces.append(char(newletter)+str(newnumber))
 			elif Main.currentboard[char(newletter)+str(newnumber)][0] == 'b':
 				Main.spaces.append(char(newletter)+str(newnumber))
+				break
 			else:
 				break
 	newletter = ord(space[0])
@@ -123,6 +131,7 @@ func checkforspaces(space):
 				Main.spaces.append(char(newletter)+str(newnumber))
 			elif Main.currentboard[char(newletter)+str(newnumber)][0] == 'b':
 				Main.spaces.append(char(newletter)+str(newnumber))
+				break
 			else:
 				break
 	newletter = ord(space[0])

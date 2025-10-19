@@ -43,5 +43,14 @@ func checkforspaces(space):
 			newnumber -= 1
 			if Main.currentboard[newletter+str(newnumber)] == null:
 				Main.spaces.append(newletter+str(newnumber))
-
+	if Main.currentboard.has(char(ord(space[0])-1)+str(int(space[1])-1)):
+		if Main.currentboard[char(ord(space[0])-1)+str(int(space[1])-1)] == null:
+			pass
+		elif Main.currentboard[char(ord(space[0])-1)+str(int(space[1])-1)][0] == 'w':
+			Main.spaces.append(char(ord(space[0])-1)+str(int(space[1])-1))
+	if Main.currentboard.has(char(ord(space[0])+1)+str(int(space[1])-1)):
+		if Main.currentboard[char(ord(space[0])+1)+str(int(space[1])-1)] == null:
+			pass
+		elif Main.currentboard[char(ord(space[0])+1)+str(int(space[1])-1)][0] == 'w':
+			Main.spaces.append(char(ord(space[0])+1)+str(int(space[1])-1))
 	return(Main.spaces)

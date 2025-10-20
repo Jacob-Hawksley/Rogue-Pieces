@@ -1,7 +1,7 @@
 extends Area2D
 
 var tile 
-var piece = 'wking'
+var piece = 'wK'
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
